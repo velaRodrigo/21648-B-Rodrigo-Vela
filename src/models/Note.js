@@ -6,7 +6,6 @@ const NoteModel = sequelize.define("notas", {
   title: DataTypes.STRING,
   content: DataTypes.TEXT,
   image: DataTypes.STRING,
-  date: DataTypes.DATE
 });
 
 module.exports = { NoteModel };

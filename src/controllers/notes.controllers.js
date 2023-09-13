@@ -25,19 +25,19 @@ const formUpdateNote = async (req, res) => {
 
 // controladores que efectuan cambios en la base de datos y redireccionan
 const createNote = async (req, res) => {
-  const { author, content, title, date, image } = req.body;
+  const { author, content, title, image } = req.body;
 
-  await NoteModel.create({ author, content, title, date, image });
+  await NoteModel.create({ author, content, title, image });
 
   res.redirect("/notes");
 };
 
 const updateNote = async (req, res) => {
-  const { id, author, content } = req.body;
+  const { id, author, content, image } = req.body;
 
   const note = await NoteModel.findByPk(id);
 
-  await note.update({ author, content });
+  await note.update({ author, content, title, image });
 
   res.redirect("/notes");
 };

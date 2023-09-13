@@ -12,10 +12,31 @@
     <h1>Update note</h1>
 
     <form action="/notes/update" method="post">
-        <input type="text" name="id" value="<%= note.id %>" hidden>
-        <input type="text" name="author" placeholder="@author" value="<%= note.author %>"><br>
-        <textarea name="content" cols="30" rows="10" placeholder="my new content" ><%= note.content %></textarea><br>
-        <button>Save</button>
-    </form>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" name="author" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          
+          <div class="input-group mb-3" >
+            <input type="text" class="form-control" name="title"  placeholder="Titulo" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          </div>
+          
+          
+          <div class="mb-3">
+            <label for="basic-url" class="form-label" >Imagen URL</label>
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">https://</span>
+              <input type="text" class="form-control" name="image" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+             
+          <div class="input-group">
+            <span class="input-group-text" >Contenido del Post</span>
+            <textarea class="form-control" name="content" aria-label="With textarea"></textarea>
+          </div>
+    
+          <button>Send</button>
+    
+        </form>
 </body>
 </html>
