@@ -18,7 +18,7 @@ app.set("views", __dirname + "/src/views");
 // para configurar en donde va a estar la carpeta public
 app.use(express.static("public"));
 
-// // para configurar el motor de plantillas
+// para configurar el motor de plantillas
 app.set("view engine", "ejs");
 
 app.use("/notes", require("./routes/notes.routes"));
