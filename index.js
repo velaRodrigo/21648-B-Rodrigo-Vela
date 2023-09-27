@@ -15,6 +15,7 @@ app.set("views", __dirname + "/src/views");
 
 app.use(express.static("public"));
 
+
 app.set("view engine", "ejs"); //motor de plantillas ejs
 
 app.use("/", require("./routes/places.routes"));
