@@ -21,6 +21,6 @@ app.use("/", require("./routes/places.routes"));
 
 
 app.listen(3000, () => {
-  sequelize.sync({ force: true });
+  sequelize.sync({ force: false });
   console.log("Servidor Conectado");
 });
